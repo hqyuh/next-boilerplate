@@ -1,0 +1,7 @@
+{
+  "title": "Hi!",
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, vi {Vietnamese} en {English} other {Unknown}}"
+  }
+}

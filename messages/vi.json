@@ -1,0 +1,7 @@
+{
+  "title": "Xin chào!",
+  "LocaleSwitcher": {
+    "label": "Thay đổi ngôn ngữ",
+    "locale": "{locale, select, vi {Vietnamese} en {English} other {Khác}}"
+  }
+}
