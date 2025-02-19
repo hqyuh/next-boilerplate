@@ -1,36 +1,19 @@
-/* eslint-disable react-refresh/only-export-components */
 'use client';
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import withClientOnly from '@/hocs/withClientOnly';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue
+} from '@/components/ui/select';
 import { routing, usePathname, useRouter } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
-import clsx from 'clsx';
 import { useLocale, useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useTransition } from 'react';
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
 
 const LocaleSwitcherSelect = () => {
   const router = useRouter();
@@ -53,24 +36,24 @@ const LocaleSwitcherSelect = () => {
   }
 
   return (
-    <label className={clsx(isPending && 'transition-opacity [&:disabled]:opacity-30')}>
+    <label className={cn(isPending && 'transition-opacity [&:disabled]:opacity-30')}>
       <Select onValueChange={onSelectChange} defaultValue={locale}>
-        <SelectTrigger
-          className={cn('w-[130px] rounded-sm bg-white font-bold ring-0 focus:ring-0', 'dark:bg-black dark:text-white')}
-        >
-          <SelectValue />
+        <SelectTrigger className='w-[130px] rounded-full'>
+          <SelectValue placeholder='Select a language' />
         </SelectTrigger>
         <SelectContent>
-          <SelectGroup></SelectGroup>
-          {routing.locales.map((cur) => (
-            <SelectItem key={cur} value={cur}>
-              {t('locale', { locale: cur })}
-            </SelectItem>
-          ))}
+          <SelectGroup>
+            <SelectLabel>Language</SelectLabel>
+            {routing.locales.map((cur) => (
+              <SelectItem key={cur} value={cur}>
+                {t('locale', { locale: cur })}
+              </SelectItem>
+            ))}
+          </SelectGroup>
         </SelectContent>
       </Select>
     </label>
   );
 };
 
-export default withClientOnly(LocaleSwitcherSelect);
+export default LocaleSwitcherSelect;

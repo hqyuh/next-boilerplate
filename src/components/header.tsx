@@ -8,7 +8,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ModeToggle } from './mode-toggle';
+import ThemeToggleButton from './mode-toggle';
 
 const urlLogo =
   'https://media2.dev.to/dynamic/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png';
@@ -22,7 +22,7 @@ export default async function Header() {
     <HStack align={'center'} pos={'apart'} className='px-5 pt-1'>
       <Image src={urlLogo} alt='Header Logo' width={50} height={40} />
       <HStack align={'center'}>
-        <ModeToggle />
+        <ThemeToggleButton />
         <LocaleSwitcherSelect />
         {userId ? (
           <div className='flex items-center justify-center'>
@@ -32,7 +32,7 @@ export default async function Header() {
           </div>
         ) : (
           <div className='flex items-center justify-center gap-1'>
-            <Button>
+            <Button className='rounded-full'>
               <Link
                 href={{
                   pathname: `/${locale}/sign-in`
@@ -41,7 +41,7 @@ export default async function Header() {
                 {t('signIn')}
               </Link>
             </Button>
-            <Button>
+            <Button className='rounded-full'>
               <Link
                 href={{
                   pathname: `/${locale}/sign-up`
