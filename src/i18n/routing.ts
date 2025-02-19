@@ -7,7 +7,7 @@ export const routing = defineRouting({
   defaultLocale: 'en',
   pathnames: {
     '/': '/',
-    '/users/[id]': '/users/[id]'
+    '/posts/[id]': '/posts/[id]'
   }
 });
 

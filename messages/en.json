@@ -3,5 +3,9 @@
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, vi {Vietnamese} en {English} other {Unknown}}"
+  },
+  "header": {
+    "signIn": "Sign in",
+    "signUp": "Create account"
   }
 }

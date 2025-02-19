@@ -18,6 +18,8 @@
     "postgis",
     "sonarjs",
     "sslmode",
+    "TFCC",
+    "toploader",
     "trivago"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"

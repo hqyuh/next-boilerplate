@@ -32,31 +32,7 @@ import { useTransition } from 'react';
 
 /* eslint-disable react-refresh/only-export-components */
 
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-/* eslint-disable react-refresh/only-export-components */
-
-function LocaleSwitcherSelect() {
+const LocaleSwitcherSelect = () => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const t = useTranslations('LocaleSwitcher');
@@ -95,6 +71,6 @@ function LocaleSwitcherSelect() {
       </Select>
     </label>
   );
-}
+};
 
 export default withClientOnly(LocaleSwitcherSelect);

@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
+import TopLoader from '@/components/top-loader';
 import { routing } from '@/i18n/routing';
 import ReactQueryProviders from '@/providers/react-query-providers';
 import { ThemeProvider } from '@/providers/theme-provider';
@@ -52,6 +53,7 @@ export default async function LocaleLayout({
                 <div className='flex h-screen flex-col'>
                   <Header />
                   <div className='flex-1'>{children}</div>
+                  <TopLoader />
                 </div>
               </ReactQueryProviders>
               <TailwindIndicator isProduction={process.env.NODE_ENV === 'production'} />
